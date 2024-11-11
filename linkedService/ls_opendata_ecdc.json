@@ -1,0 +1,19 @@
+{
+	"name": "ls_opendata_ecdc",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"sourcebaseUrl": {
+				"type": "string",
+				"defaultValue": "https://github.com"
+			}
+		},
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "@{linkedService().sourcebaseUrl}",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
